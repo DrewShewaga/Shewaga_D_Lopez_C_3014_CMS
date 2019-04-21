@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+    list-style-type:none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.header{
+    height: 110px;
+    background-color: #333;
+}
+
+.logo{
+    margin-left: 8%;
+    padding-top: 15px;
+}
+
+.logoText{
+    color: #fff;
+}
+
+.searchForm{
+    margin-left: 75%;
+}
+
+.filterList{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.filterLink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.adminLink{
+    color: #fff;
+    margin-left: 75%;
+}
+
+.filterLink:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.productArea{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product{
+    background-color: #ccc;
+    width: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.productImg{
+    width: 220px;
+}
+
