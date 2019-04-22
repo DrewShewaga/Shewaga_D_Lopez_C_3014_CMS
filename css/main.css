@@ -42,21 +42,42 @@ body {
 .filterLink:hover {
   text-decoration: underline; }
 
-.productArea {
+.productArea, .editArea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
 
 .product {
-  background-color: #ccc;
-  width: 250px;
+  background: #989898;
+  background: linear-gradient(0deg, #989898 0%, #cccccc 64%, #717171 100%);
+  width: 300px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 20px; }
+  padding: 20px;
+  display: flex;
+  flex-direction: column; }
 
 .productImg {
   width: 220px; }
+
+.createProd {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%; }
+
+.prodInput {
+  margin-bottom: 25px; }
+
+.editForm {
+  display: flex;
+  flex-direction: column; }
+
+.deleteForm {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=main.css.map */

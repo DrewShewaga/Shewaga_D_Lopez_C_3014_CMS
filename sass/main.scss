@@ -57,23 +57,49 @@ body{
 
 
 
-.productArea{
+.productArea, .editArea{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .product{
-    background-color: #ccc;
-    width: 250px;
+    background: rgb(152,152,152);
+    background: linear-gradient(0deg, rgba(152,152,152,1) 0%, rgba(204,204,204,1) 64%, rgba(113,113,113,1) 100%);
+    width: 300px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .productImg{
     width: 220px;
+}
+
+
+.createProd{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.prodInput{
+    margin-bottom: 25px;
+}
+
+.editForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.deleteForm{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 

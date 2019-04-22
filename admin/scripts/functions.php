@@ -30,7 +30,26 @@ function filterResults($tbl, $tbl_2, $tbl_3, $col, $col_2, $col_3, $filter){
     if($runQuery){
         return $runQuery;
     }else{
-        $error = 'There was a problem';
+        return "Sorry, we don't have that";
+    }
+}
+
+function searchBar($search){
+    include('connect.php');
+
+    $keyword = "%{$search}%";
+    $searchQuery = "SELECT * FROM tbl_product WHERE product_name LIKE :search";
+    $searchSet = $pdo->prepare($searchQuery);
+    $searchSet->execute(
+        array(
+            ':search' => $keyword
+        )
+    );
+
+    if($searchSet){
+        return $searchSet;
+    }else{
+        $error = 'No matches';
         return $error;
     }
 }

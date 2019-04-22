@@ -17,6 +17,8 @@ confirm_logged_in();
     <h1>Admin Dashboard</h1>
     <p>This is the admin dashboard page</p>
 
+    <a href="../index.php">Home</a>
+
     <nav>
         <ul>
             <li><a href="admin_createproduct.php">Create Product</a></li>

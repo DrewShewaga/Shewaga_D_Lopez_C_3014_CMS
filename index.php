@@ -10,6 +10,9 @@
         $col_3 = 'category_name';
         $filter = $_GET['filter'];
         $results = filterResults($tbl, $tbl_2, $tbl_3, $col, $col_2, $col_3, $filter);
+    }elseif(isset($_GET['search'])){
+        $search = $_GET['search'];
+        $results = searchBar($search);
     }else{
         $results = getAll('tbl_product');
     }
@@ -32,7 +35,7 @@
                 <h2 class="logoText">Sport Chek</h2>
             </div>
 
-            <form action="admin/scripts/search.php" method="post" class="searchForm">
+            <form action="" method="get" class="searchForm">
                 <input type="search" placeholder="Search" name="search">
                 <button type="submit">Search</button>
             </form>
@@ -45,6 +48,7 @@
                     <li class="filterItem"><a class="filterLink" href="index.php?filter=shoes" target="">Shoes</a></li>
                     <li class="filterItem"><a class="filterLink" href="index.php?filter=gear" target="">Gear</a></li>
                     <li class="filterItem"><a class="filterLink" href="index.php?filter=electronics" target="">Electronics</a></li>
+                    <li class="filterItem"><a class="filterLink" href="index.php?filter=jerseys" target="">Jerseys</a></li>
                     <li class="filterItem"><a class="filterLink" href="index.php" target="">All</a></li>
                 </ul>
             </nav>
@@ -52,10 +56,13 @@
             <a class="adminLink" href="admin/admin_login.php">Admin Panel</a>
         </header>
 
+        <!-- <h2><?php //echo $error ?></h2> -->
+
         <div class="productArea">
             <?php while($row = $results->fetch(PDO::FETCH_ASSOC)): ?>
                 <div class="product">
                     <img class="productImg" src='images/<?php echo $row['product_image'];?>' alt="<?php echo $row['product_name']; ?>">
+                    <h2 class="productPrice">$<?php echo $row['product_price'];?></h2>
                     <h2 class="productTitle"><?php echo $row['product_name'];?></h2>
                     <p class="productDesc"><?php echo $row['product_desc']; ?></p>
                 </div>
